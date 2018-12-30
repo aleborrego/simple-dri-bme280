@@ -1,0 +1,11 @@
+{
+  "name": "simple-dri-bme280",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "repository": "https://github.com/aleborrego/simple-dri-bme280",
+  "author": "aleBorrego",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "serialport": "^7.1.1"
+  }
+}
