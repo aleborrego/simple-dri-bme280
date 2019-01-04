@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./assets/css/index.css";
-import App from "./app";
 import * as serviceWorker from "./serviceWorker";
+
+const SerialPort = require("serialport");
+
+const App = () => <div>{SerialPort.list()}</div>;
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
