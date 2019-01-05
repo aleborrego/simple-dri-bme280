@@ -4,67 +4,18 @@
   "repository": "https://github.com/aleborrego/simple-dri-bme280",
   "author": "aleBorrego",
   "license": "Apache-2.0",
-  "main": "scripts/electron.js",
-  "homepage": "./",
-  "dependencies": {
-    "@serialport/parser-readline": "^2.0.2",
-    "electron-is-dev": "^1.0.1",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-scripts": "2.1.1",
-    "serialport": "^7.1.1"
-  },
+  "main": "main.js",
   "scripts": {
-    "start:dev": "cross-env BROWSER=none react-scripts start",
-    "start:electron": "wait-on http://localhost:3000 && electron .",
-    "start": "npm-run-all --parallel start:dev start:electron",
-    "build:src": "react-scripts build",
-    "build:electron": "electron-builder",
-    "build": "npm-run-all build:src build:electron",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "electron .",
+    "install": "electron-rebuild",
+    "build": "electron-builder"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "airbnb",
-      "plugin:prettier/recommended"
-    ],
-    "parser": "babel-eslint"
-  },
-  "build": {
-    "appId": "simple-dri-bme280",
-    "files": [
-      "build/**/*",
-      "node_modules/**/*",
-      "./scripts/electron.js"
-    ],
-    "directories": {
-      "buildResources": "src/assets"
-    }
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
   "devDependencies": {
-    "babel-eslint": "9.x",
-    "cross-env": "^5.2.0",
-    "electron": "^4.0.0",
+    "electron": "^1.4.1",
     "electron-builder": "^20.38.4",
-    "eslint": "5.6.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^3.3.0",
-    "eslint-config-react-app": "^3.0.6",
-    "eslint-plugin-flowtype": "2.x",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.11.0",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^1.15.3",
-    "wait-on": "^3.2.0"
+    "electron-rebuild": "^1.4.0"
+  },
+  "dependencies": {
+    "serialport": "^7.1.1"
   }
 }
