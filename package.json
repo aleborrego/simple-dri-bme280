@@ -4,67 +4,16 @@
   "repository": "https://github.com/aleborrego/simple-dri-bme280",
   "author": "aleBorrego",
   "license": "Apache-2.0",
-  "main": "scripts/electron.js",
-  "homepage": "./",
+  "main": "main.js",
   "scripts": {
-    "start:electron": "electron .",
-    "start:electron:rebuild": "electron-rebuild && electron .",
-    "build:src": "craco build",
-    "build:electron": "electron-builder",
-    "build:electron:rebuild": "electron-rebuild && electron-builder",
-    "build": "npm-run-all build:src build:electron",
-    "test": "craco test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "airbnb",
-      "plugin:prettier/recommended"
-    ],
-    "parser": "babel-eslint",
-    "rules": {
-      "no-underscore-dangle": [
-        "error",
-        {
-          "allow": [
-            "__REDUX_DEVTOOLS_EXTENSION_COMPOSE__"
-          ]
-        }
-      ],
-      "no-debugger": [
-        "warn"
-      ],
-      "react/jsx-indent": "off"
-    }
-  },
-  "build": {
-    "appId": "simple-dri-bme280",
-    "files": [
-      "build/**/*",
-      "node_modules/**/*",
-      "./scripts/electron.js"
-    ],
-    "directories": {
-      "buildResources": "src/assets"
-    }
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "dependencies": {
-    "@serialport/parser-readline": "^2.0.2",
-    "electron-is-dev": "^1.0.1",
-    "serialport": "^7.1.1"
+    "start": "electron .",
+    "install": "electron-rebuild"
   },
   "devDependencies": {
-    "cross-env": "^5.2.0",
-    "electron": "^4.0.0",
-    "electron-builder": "^20.38.4",
-    "electron-rebuild": "^1.8.2",
-    "npm-run-all": "^4.1.5"
+    "electron": "^1.4.1",
+    "electron-rebuild": "^1.4.0"
+  },
+  "dependencies": {
+    "serialport": "^7.1.1"
   }
 }

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reader</title>
+  </head>
+  <body>
+    <div className="App">
+      <h1>Temperatura: <span id="temperature">-</span></h1>
+      <br />
+      <h1>Humedad: <span id="humidity">-</span></h1>
+      <br />
+      <h1>Presión: <span id="preassure">-</span></h1>
+    </div>
+    <select id ="select">
+    </select>
+    <button type="button" onclick="operations.read(document.getElementById('select').value)">Start</button>
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    const operations = require("./renderer.js");
+    operations.list();
+  </script>
+</html>
