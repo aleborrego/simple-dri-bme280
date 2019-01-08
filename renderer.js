@@ -66,7 +66,12 @@ const read = path => {
   port.pipe(parser);
   parser.on("data", data => {
     console.log(`${parameterRead}: ${data}`);
-    document.getElementById(parameterRead).textContent = data;
+    let transformedData = data;
+    if (parameterRead === "preassure") {
+      transformedData =
+        data.substring(0, data.length - 5) + "." + data.substring(data.length - 5, data.length - 3);
+    }
+    document.getElementById(parameterRead).textContent = transformedData;
     if (next < 2) {
       next += 1;
       readOne(commands[next]);
